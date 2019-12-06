@@ -11,11 +11,10 @@ namespace AzStg12Function2
     {
         static UploadBlobTimerFunction()
         {
-            // Un-comment this line to override assembly version resolution
-            //ApplicationHelper.Startup();
+            ApplicationHelper.Startup();
         }
 
-        [FunctionName("Function1")]
+        [FunctionName("UploadBlobTimerFunction")]
         public static void Run([TimerTrigger("*/5 * * * * *")]TimerInfo myTimer, TraceWriter log)
         {
             log.Info($"C# Timer trigger function executed at: {DateTime.Now}");
